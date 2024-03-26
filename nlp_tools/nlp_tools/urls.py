@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from nlpApps import views as view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home', view.home)
 ]
