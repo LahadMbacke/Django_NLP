@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>  
+<html>
 <head>
     {% load static %}
     <title>Named Entity Recognition</title>
-    <link rel="stylesheet" href="{% static 'nlpApps/style.css' %}">
+    <link rel="stylesheet" href="{% static 'nlpApps/style.css' %}"> 
 </head>
 <body>
-    <h1>Named Entity Recognition</h1>
-    <form method="post" action="{% url 'submit_form_ner' %}">
-        {% csrf_token %}
-        <input type="text" name="user_input">
-        <button type="submit">Envoyer</button>
-    </form>
-    
+    <div class="container">
+        <h1>Named Entity Recognition</h1>
+        <form method="post" action="{% url 'submit_form_ner' %}">
+            {% csrf_token %}
+            <textarea id="inputt" name="user_input"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <h2>Result</h2>
+        {{ result|safe }}
+    </div>
+</body>
 </html>

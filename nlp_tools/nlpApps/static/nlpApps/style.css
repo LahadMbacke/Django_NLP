@@ -1,7 +1,22 @@
-h1 {
-    color: #e21818;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+textarea {
+    width: 50%;
+    height: 200px;
+}
+/* button {
+    margin-top: 10px;
+} */
+button {
+    padding: 0.5em 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
 }
