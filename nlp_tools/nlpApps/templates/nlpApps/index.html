@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
     <title>Projet NLP</title>
     <link rel="stylesheet" type="text/css" href="{% static 'nlpApps/index.css' %}">
 </head>
 <body>
 
-<div class="navbar">
-  <a href="#home">Accueil</a>
-  <a href="#ner">NER</a>
-  <a href="#sentiment">Analyse de sentiment</a>
-  <a href="#translation">Traduction automatique</a>
-  <!-- Ajoutez d'autres liens ici au besoin -->
-</div>
+    {% include 'nlpApps/navbar.html' %}
 
 <div class="main-content">
     <h1>Projet de Traitement Automatique du Langage Naturel (NLP)</h1>
@@ -20,9 +15,8 @@
     <p>Utilisez les liens dans la barre de navigation ci-dessus pour accéder aux différentes fonctionnalités :</p>
     <ul>
         <li><strong>NER :</strong> Reconnaissance des entités nommées</li>
-        <li><strong>Analyse de sentiment :</strong> Analyse du sentiment dans un texte</li>
-        <li><strong>Traduction automatique :</strong> Traduction de texte automatique</li>
-        <!-- Ajoutez des descriptions pour d'autres fonctionnalités au besoin -->
+        <li><strong>Analyse de sentiment :</strong> Analyse du sentiment dans un texte <em>A venir</em></li>
+        <li><strong>Traduction automatique :</strong> Traduction de texte automatique <em>A venir</em></li>
     </ul>
     <p>N'hésitez pas à explorer nos fonctionnalités et à nous contacter pour toute question ou suggestion.</p>
 </div>

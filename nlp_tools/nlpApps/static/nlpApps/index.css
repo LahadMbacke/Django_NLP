@@ -26,3 +26,7 @@ body {
 .main-content {
     padding: 20px;
 }
+
+em {
+    color: red;
+}

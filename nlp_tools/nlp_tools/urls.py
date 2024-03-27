@@ -20,5 +20,6 @@ from nlpApps import views as view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', view.home)
+    path('home/', view.home, name='home'),
+    path('submit_form_ner/', view.submit_form_ner, name='submit_form_ner'),
 ]

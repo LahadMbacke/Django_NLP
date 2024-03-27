@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Projet NLP</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'nlpApps/index.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="{% url 'home' %}">Accueil</a>
+  <a href="{% url 'submit_form_ner' %}">NER</a>
+  <a href="#sentiment">Analyse de sentiment</a>
+  <a href="#translation">Traduction automatique</a>
+  <!-- Ajoutez d'autres liens ici au besoin -->
+</div>
+
+</body>
+</html>

@@ -3,9 +3,11 @@
 <head>
     {% load static %}
     <title>Named Entity Recognition</title>
-    <link rel="stylesheet" href="{% static 'nlpApps/style.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'nlpApps/style.css' %}">
 </head>
 <body>
+    {% include 'nlpApps/navbar.html' %}
+
     <div class="container">
         <h1>Named Entity Recognition</h1>
         <form method="post" action="{% url 'submit_form_ner' %}">
