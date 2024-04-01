@@ -13,7 +13,9 @@
         <form method="post" action="{% url 'submit_form_ner' %}">
             {% csrf_token %}
             <textarea id="inputt" name="user_input"></textarea>
+            <input type="file" accept=".txt,.pdf" />
             <button type="submit">Envoyer</button>
+           
         </form>
 
         <h2>Result</h2>
