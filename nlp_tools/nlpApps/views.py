@@ -22,15 +22,18 @@ def submit_form_ner(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            file = request.FILES['file']
-            text = str(file.read(), 'utf-8')
-        else:
-            text = request.POST['user_input']
-        doc = nlp(text)
-        if doc.ents:  # Check if the document contains entities
-            html = displacy.render(doc, style="ent")
-        else:
-            html = "No entities found"
-        return render(request, 'nlpApps/ner.html', {'result': html, 'text': text, 'form': form})
+            file = request.FILES.get('file')
+            if file:
+                text = str(file.read(), 'utf-8')
+            else:
+                text = request.POST['user_input']
+            doc = nlp(text)
+            if doc.ents:
+                html = displacy.render(doc, style="ent")
+            else:
+                html = "No entities found"
+            return render(request, 'nlpApps/ner.html', {'result': html, 'text': text, 'form': form})
     else:
         return render(request, 'nlpApps/ner.html', {'form': UploadFileForm()})
+    
+

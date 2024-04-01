@@ -10,14 +10,16 @@
 
     <div class="container">
         <h1>Named Entity Recognition</h1>
-        <form method="post" action="{% url 'submit_form_ner' %}">
-            {% csrf_token %}
+        <form method="post" action="{% url 'submit_form_ner' %}" enctype="multipart/form-data">
+           
             <textarea id="inputt" name="user_input"></textarea>
-            <input type="file" accept=".txt,.pdf" />
+            {% csrf_token %}
+            <p> {{ form.file }}</p>
             <button type="submit">Envoyer</button>
            
         </form>
-
+        <!-- <h2>Input Text</h2>
+        <p>{{ text }}</p> -->
         <h2>Result</h2>
         {{ result|safe }}
     </div>
